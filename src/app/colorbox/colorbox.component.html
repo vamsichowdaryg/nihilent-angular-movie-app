@@ -1,0 +1,10 @@
+<!-- <input [style.background]="clr" type="text" (input)="colour($event)" /> -->
+<input [style.background]="clr" type="text" [(ngModel)]="clr" />
+<button (click)="addcolor($event)">Add colour</button>
+
+<app-box
+  *ngFor="let nm of colorList; let i = index"
+  [clr]="nm"
+  [idx]="i"
+  (rmclridx)="removecolor($event)"
+></app-box>
