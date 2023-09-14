@@ -5,3 +5,6 @@
     /* flex-wrap: wrap; */
     overflow: hidden;
 }
+.input{
+    display: grid;
+}

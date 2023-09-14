@@ -5,16 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Task1Component } from './task1/task1.component';
 import { CounterComponent } from './counter/counter.component';
+import { ColorboxComponent } from './colorbox/colorbox.component';
+import { FormsModule } from '@angular/forms';
+import { BoxComponent } from './box/box.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     Task1Component,
-    CounterComponent
+    CounterComponent,
+    ColorboxComponent,
+    BoxComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

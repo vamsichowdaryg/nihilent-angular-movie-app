@@ -1,36 +1,50 @@
-<!-- <div class="content"> -->
-<!-- <app-task1
-  src="https://www.koimoi.com/wp-content/new-galleries/2022/01/pushpa-to-cross-250-crore-mark-today-001.jpg"
-  moviename="pushpa"
-  rating="⭐9.2"
-  content="A labourer rises through the ranks of a red sandal smuggling syndicate, making some powerful enemies in the process"
-></app-task1>
-<app-task1
-  src="https://www.koimoi.com/wp-content/new-galleries/2022/01/pushpa-to-cross-250-crore-mark-today-001.jpg"
-  moviename="pushpa"
-  rating="⭐9.2"
-  content="A labourer rises through the ranks of a red sandal smuggling syndicate, making some powerful enemies in the process"
-></app-task1>
-<app-task1
-  src="https://www.koimoi.com/wp-content/new-galleries/2022/01/pushpa-to-cross-250-crore-mark-today-001.jpg"
-  moviename="pushpa"
-  rating="⭐9.2"
-  content="A labourer rises through the ranks of a red sandal smuggling syndicate, making some powerful enemies in the process"
-></app-task1>
-<app-task1
-  src="https://www.koimoi.com/wp-content/new-galleries/2022/01/pushpa-to-cross-250-crore-mark-today-001.jpg"
-  moviename="pushpa"
-  rating="⭐9.2"
-  content="A labourer rises through the ranks of a red sandal smuggling syndicate, making some powerful enemies in the process"
-></app-task1> -->
-<!-- </div> -->
-<div class="content">
+<!-- <div class="content">
   <app-task1
-    *ngFor="let movie of movielist"
-    [src]="movie.src"
-    [moviename]="movie.moviename"
-    [rating]="movie.rating"
-    [content]="movie.content"
+    src="https://www.koimoi.com/wp-content/new-galleries/2022/01/pushpa-to-cross-250-crore-mark-today-001.jpg"
+    moviename="pushpa"
+    rating="⭐9.2"
+    content="A labourer rises through the ranks of a red sandal smuggling syndicate, making some powerful enemies in the process"
   ></app-task1>
+  <app-task1
+    src="https://www.koimoi.com/wp-content/new-galleries/2022/01/pushpa-to-cross-250-crore-mark-today-001.jpg"
+    moviename="pushpa"
+    rating="⭐9.2"
+    content="A labourer rises through the ranks of a red sandal smuggling syndicate, making some powerful enemies in the process"
+  ></app-task1>
+  <app-task1
+    src="https://www.koimoi.com/wp-content/new-galleries/2022/01/pushpa-to-cross-250-crore-mark-today-001.jpg"
+    moviename="pushpa"
+    rating="⭐9.2"
+    content="A labourer rises through the ranks of a red sandal smuggling syndicate, making some powerful enemies in the process"
+  ></app-task1>
+  <app-task1
+    src="https://www.koimoi.com/wp-content/new-galleries/2022/01/pushpa-to-cross-250-crore-mark-today-001.jpg"
+    moviename="pushpa"
+    rating="⭐9.2"
+    content="A labourer rises through the ranks of a red sandal smuggling syndicate, making some powerful enemies in the process"
+  ></app-task1>
+</div> -->
+<div class="input">
+  <input type="text" [(ngModel)]="movie.src" placeholder="pic url" />
+  <input type="text" [(ngModel)]="movie.moviename" placeholder="title" />
+  <input type="text" [(ngModel)]="movie.content" placeholder="description" />
+  <input type="text" [(ngModel)]="movie.rating" placeholder="rating" />
+  <button (click)="addmovie($event)">Add movie</button>
+</div>
+<div class="content">
+  <!-- <input (ngModelChange)="movie = $event" type="text" [(ngModel)]="movie" /> -->
+
+  <app-task1
+    *ngFor="let nm of movielist; let i = index"
+    [src]="nm.src"
+    [moviename]="nm.moviename"
+    [rating]="nm.rating"
+    [content]="nm.content"
+    [idx]="i"
+    (rmmovieidx)="removemovie($event)"
+  >
+  </app-task1>
 </div>
 <!-- <app-counter></app-counter> -->
+<!-- <app-colorbox></app-colorbox> -->
+<!-- <app-box></app-box> -->
