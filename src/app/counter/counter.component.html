@@ -6,9 +6,17 @@
     />
   </div> -->
   <div class="newone">
-    <button (click)="Increment()">like👍{{ count }}</button>
-    <button (click)="Decrement()">Dislike👎{{ count1 }}</button>
-    <input type="range" [max]="count + count1" [value]="count" />
-    <h2 *ngIf="awesome">you are awesome</h2>
+    <div (click)="Increment()" matBadgeSize="large" class="demo-section">
+      👍{{ count }}
+    </div>
+    <div (click)="Decrement()" matBadgeSize="large" class="demo-section">
+      👍{{ count1 }}
+    </div>
+    <!-- <mat-card-actions> -->
+    <!-- <button (click)="Increment()">like👍{{count}}</button> -->
+    <!-- <button (click)="Decrement()">Dislike👎{{ count1 }}</button> -->
+    <!-- </mat-card-actions> -->
+    <!-- <input type="range" [max]="count + count1" [value]="count" /> -->
+    <!-- <h2 *ngIf="awesome">you are awesome</h2> -->
   </div>
 </div>

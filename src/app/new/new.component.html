@@ -1,0 +1,93 @@
+<!-- <div class="content">
+  <app-task1
+    src="https://www.koimoi.com/wp-content/new-galleries/2022/01/pushpa-to-cross-250-crore-mark-today-001.jpg"
+    moviename="pushpa"
+    rating="⭐9.2"
+    content="A labourer rises through the ranks of a red sandal smuggling syndicate, making some powerful enemies in the process"
+  ></app-task1>
+  <app-task1
+    src="https://www.koimoi.com/wp-content/new-galleries/2022/01/pushpa-to-cross-250-crore-mark-today-001.jpg"
+    moviename="pushpa"
+    rating="⭐9.2"
+    content="A labourer rises through the ranks of a red sandal smuggling syndicate, making some powerful enemies in the process"
+  ></app-task1>
+  <app-task1
+    src="https://www.koimoi.com/wp-content/new-galleries/2022/01/pushpa-to-cross-250-crore-mark-today-001.jpg"
+    moviename="pushpa"
+    rating="⭐9.2"
+    content="A labourer rises through the ranks of a red sandal smuggling syndicate, making some powerful enemies in the process"
+  ></app-task1>
+  <app-task1
+    src="https://www.koimoi.com/wp-content/new-galleries/2022/01/pushpa-to-cross-250-crore-mark-today-001.jpg"
+    moviename="pushpa"
+    rating="⭐9.2"
+    content="A labourer rises through the ranks of a red sandal smuggling syndicate, making some powerful enemies in the process"
+  ></app-task1>
+</div> -->
+<!-- <div class="input"> -->
+<!-- <input
+    matInput
+    placeholder=""
+    type="text"
+    [(ngModel)]="movie.src"
+    matInput
+    placeholder="pic url"
+  />
+  <input
+    matInput
+    placeholder=""
+    type="text"
+    [(ngModel)]="movie.moviename"
+    placeholder="title"
+  />
+  <input
+    matInput
+    placeholder=""
+    type="text"
+    [(ngModel)]="movie.content"
+    placeholder="description"
+  /> -->
+<!-- <mat-card-content>Rating </mat-card-content>
+  <mat-form-field class="example-full-width">
+    <mat-label></mat-label>
+    <input matInput placeholder="rating" />
+  </mat-form-field>
+  <mat-card-content>Description </mat-card-content>
+  <mat-form-field class="example-full-width">
+    <mat-label></mat-label>
+    <input matInput placeholder="description" />
+  </mat-form-field>
+  <mat-card-content>Picurl </mat-card-content>
+  <mat-form-field class="example-full-width">
+    <mat-label></mat-label>
+    <input matInput placeholder="picurl" />
+  </mat-form-field>
+  <mat-card-content> Title </mat-card-content>
+  <mat-form-field class="example-full-width">
+    <mat-label></mat-label>
+    <input matInput placeholder="name" />
+  </mat-form-field> -->
+<!-- <input matInput placeholder="rating" type="text" [(ngModel)]="movie.rating" /> -->
+<!-- <button mat-raised-button color="primary" (click)="addmovie($event)">
+    {{ "Add movie" | uppercase }}
+    {{ 100.85 | currency : "USD" }}
+  </button>
+</div> -->
+<div class="content">
+  <!-- <input (ngModelChange)="movie = $event" type="text" [(ngModel)]="movie" /> -->
+
+  <app-task1
+    *ngFor="let nm of movielist; let i = index"
+    [movie]="nm"
+    [idx]="i"
+    (rmmovieidx)="removemovie($event)"
+  >
+    <!-- [src]="nm.src" [moviename]="nm.moviename" [rating]="nm.rating"
+    [content]="nm.content" -->
+  </app-task1>
+
+  <!-- </div> -->
+  <!-- <app-counter></app-counter> -->
+  <!-- <app-colorbox></app-colorbox> -->
+  <!-- <app-box></app-box> -->
+</div>

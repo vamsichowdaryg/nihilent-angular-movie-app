@@ -1,6 +1,9 @@
-.buttons{
+
+ .newone{
     display: flex;
-    height: 3rem;
-    width: 100%;
-    
-}
+    gap: 10px;
+    font-size: x-large;
+    padding: 2%;
+    color: purple;
+    cursor: pointer;
+} 

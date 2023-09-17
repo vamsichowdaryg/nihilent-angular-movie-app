@@ -1,12 +1,17 @@
 <div class="final">
   <div class="movie img">
-    <img src="{{ src }}" alt="" />
+    <img src="{{ movie.src }}" alt="" />
   </div>
   <div class="moviename">
-    <span class="name">{{ moviename }}</span>
-    <span class="name">{{ rating }}</span>
+    <span class="movie-name">{{ movie.name }}</span>
+    <button (click)="toggle()" mat-icon-button aria-label="Expand-less">
+      <mat-icon>expand_less</mat-icon>
+    </button>
+    <button (click)="gotoMovieDetail()"><mat-icon>info</mat-icon></button>
+    <span class="movie-rating">⭐{{ movie.rating }}</span>
   </div>
-  <p>{{ content }}</p>
+
+  <p *ngIf="show">{{ movie.content }}</p>
   <button (click)="delmovie()">delmovie</button>
   <app-counter> </app-counter>
 </div>

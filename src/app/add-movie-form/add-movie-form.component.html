@@ -1,0 +1,66 @@
+<div class="input">
+  <!-- <input
+      matInput
+      placeholder=""
+      type="text"
+      [(ngModel)]="movie.src"
+      matInput
+      placeholder="pic url"
+    />
+    <input
+      matInput
+      placeholder=""
+      type="text"
+      [(ngModel)]="movie.moviename"
+      placeholder="title"
+    />
+    <input
+      matInput
+      placeholder=""
+      type="text"
+      [(ngModel)]="movie.content"
+      placeholder="description"
+    /> -->
+  <mat-form-field>
+    <mat-label>Title</mat-label>
+    <input matInput [(ngModel)]="name" placeholder="Ex. Vikram" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>picurl</mat-label>
+    <input matInput [(ngModel)]="src" placeholder="Ex.http.img" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>rating</mat-label>
+    <input matInput [(ngModel)]="rating" placeholder="Ex. 7" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>summary</mat-label>
+    <input matInput [(ngModel)]="content" placeholder="Ex. Cool movie" />
+  </mat-form-field>
+
+  <!-- <mat-card-content>Rating </mat-card-content>
+  <mat-form-field class="example-full-width">
+    <mat-label></mat-label>
+    <input matInput placeholder="rating" />
+  </mat-form-field>
+  <mat-card-content>Description </mat-card-content>
+  <mat-form-field class="example-full-width">
+    <mat-label></mat-label>
+    <input matInput placeholder="description" />
+  </mat-form-field>
+  <mat-card-content>Picurl </mat-card-content>
+  <mat-form-field class="example-full-width">
+    <mat-label></mat-label>
+    <input matInput placeholder="picurl" />
+  </mat-form-field>
+  <mat-card-content> Title </mat-card-content>
+  <mat-form-field class="example-full-width">
+    <mat-label></mat-label>
+    <input matInput placeholder="name" />
+  </mat-form-field> -->
+  <!-- <input matInput placeholder="rating" type="text" [(ngModel)]="movie.rating" /> -->
+  <button mat-raised-button color="primary" (click)="addmovie()">
+    {{ "Add movie" | uppercase }}
+    {{ 100.85 | currency : "USD" }}
+  </button>
+</div>
