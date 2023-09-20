@@ -1,15 +1,7 @@
-/* .content{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    /* flex-wrap: wrap; */
-    /* overflow: hidden; */
-   
-/* }  */
 .content {
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next row */
-    justify-content: space-between; /* Distribute items evenly */
-    gap: 20px; /* Adjust the spacing between items */
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    gap: 20px; 
     padding: 20px;
   }

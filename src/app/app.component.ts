@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 type Movie = {
   name: string;
   src: string;
-  rating: number | '';
+  rating: number;
   id: string;
   trailer: string;
   content: string;

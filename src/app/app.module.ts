@@ -6,27 +6,29 @@ import { AppComponent } from './app.component';
 import { Task1Component } from './task1/task1.component';
 import { CounterComponent } from './counter/counter.component';
 import { ColorboxComponent } from './colorbox/colorbox.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BoxComponent } from './box/box.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
+import { MatBadgeModule } from '@angular/material/badge';
 import { NewComponent } from './new/new.component';
 import { AddMovieFormComponent } from './add-movie-form/add-movie-form.component';
 import { MovieDetailsPageComponent } from './movie-details-page/movie-details-page.component';
-import { MatIconModule } from '@angular/material/icon'
+import { MatIconModule } from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
+import { EditComponentComponent } from './edit-component/edit-component.component';
+import { WelcomeMsgComponent } from './welcome-msg/welcome-msg.component';
 @NgModule({
   declarations: [
     AppComponent,
-    Task1Component,
-    CounterComponent,
+
     ColorboxComponent,
     BoxComponent,
-    NewComponent,
-    AddMovieFormComponent,
-    MovieDetailsPageComponent
+
+
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,10 @@ import { MatIconModule } from '@angular/material/icon'
     MatInputModule,
     MatFormFieldModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    MatBadgeModule,
+    ReactiveFormsModule,
+    HttpClientModule
 
   ],
   providers: [],

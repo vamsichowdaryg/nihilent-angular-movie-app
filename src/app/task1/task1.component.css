@@ -1,18 +1,4 @@
 
-/* .final{
-    display: grid;
-    /* width: 100%; */
-/* }
-.movie img{
-    border-radius: 10%;
-    height: 20rem;
-    width: 100%;
-    overflow: hidden;
-}
-.moviename{
-    display: flex;
-    justify-content: space-between;
-} */ 
  .final {
     display: flex;
     flex-direction: column;
@@ -40,11 +26,14 @@
     font-weight: bold;
     margin-right: 10px;
   }
-  
-  button[aria-label="Expand-less"] {
+  .info{
+    border: 0;
+    background-color: white;
+  }
+   button[aria-label="Expand-less"] {
     background-color: transparent;
-    border: none;
-    cursor: pointer;
+    /* border: none; */
+    cursor: pointer; 
   }
   
   .movie-rating {
@@ -53,18 +42,28 @@
   }
   
   p {
-    /* display: ;  */
     margin-top: 10px;
   }
-  
-   button {
-    background-color: #ff0000; 
-    color: #fff; 
-    padding: 5px 10px;
-    border: none;
-    cursor: pointer;
-    margin-top: 10px;
-  } 
-  
+
+.delicons {
+  display: flex;
+  flex-direction: row;
+  gap: 30px; 
+}
+
+.delicons button[aria-label="Delete Movie"] {
+  background-color: red; 
+  color: white; 
+  border-radius: 50%; 
+  padding: 0.75rem; 
+}
+
+.delicons button[aria-label="Edit Movie"] {
+  background-color: orange; 
+  color: white; 
+  border-radius: 50%; 
+  padding: 0.75rem;
+}
+
   
   

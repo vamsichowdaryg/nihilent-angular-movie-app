@@ -6,17 +6,20 @@
     />
   </div> -->
   <div class="newone">
-    <div (click)="Increment()" matBadgeSize="large" class="demo-section">
-      👍{{ count }}
-    </div>
-    <div (click)="Decrement()" matBadgeSize="large" class="demo-section">
-      👍{{ count1 }}
-    </div>
-    <!-- <mat-card-actions> -->
-    <!-- <button (click)="Increment()">like👍{{count}}</button> -->
-    <!-- <button (click)="Decrement()">Dislike👎{{ count1 }}</button> -->
-    <!-- </mat-card-actions> -->
-    <!-- <input type="range" [max]="count + count1" [value]="count" /> -->
-    <!-- <h2 *ngIf="awesome">you are awesome</h2> -->
+    <mat-icon matBadge="{{ count }}" matBadgecolor="warn"
+      ><button class="liked" (click)="Increment()">👍</button></mat-icon
+    >
+    <mat-icon matBadge="{{ count1 }}" matBadgecolor="warn"
+      ><button class="disliked" (click)="Decrement()">👎</button></mat-icon
+    >
   </div>
+  <!-- <div (click)="Decrement()" matBadgeSize="large" class="demo-section">
+    👍{{ count1 }}
+  </div> -->
+  <!-- <mat-card-actions> -->
+  <!-- <button (click)="Increment()">like👍{{count}}</button> -->
+  <!-- <button (click)="Decrement()">Dislike👎{{ count1 }}</button> -->
+  <!-- </mat-card-actions> -->
+  <!-- <input type="range" [max]="count + count1" [value]="count" /> -->
+  <!-- <h2 *ngIf="awesome">you are awesome</h2> -->
 </div>

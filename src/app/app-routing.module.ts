@@ -1,16 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ColorboxComponent } from './colorbox/colorbox.component';
-import { Task1Component } from './task1/task1.component';
-import { NewComponent } from './new/new.component';
-import { AddMovieFormComponent } from './add-movie-form/add-movie-form.component';
-import { MovieDetailsPageComponent } from './movie-details-page/movie-details-page.component';
+import { WelcomeMsgComponent } from './welcome-msg/welcome-msg.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: WelcomeMsgComponent },
+  { path: 'films', redirectTo: '/movies', pathMatch: 'full' },
   { path: 'color-game', component: ColorboxComponent },
-  { path: 'movie', component: NewComponent },
-  { path: 'movie-form', component: AddMovieFormComponent },
-  { path: 'movie/:id', component: MovieDetailsPageComponent }
+  // {
+  //   path: 'movie',
+  //   children: [
+  //     { path: '', component: NewComponent, pathMatch: 'full' },
+  //     { path: 'add', component: AddMovieFormComponent },
+  //     { path: 'edit/:id', component: EditComponentComponent },
+  //     { path: ':id', component: MovieDetailsPageComponent }]
+  // },
+  { path: 'movie', loadChildren: () => import('./movies/movies.module').then(m => m.MoviesModule) }
 
 ];
 

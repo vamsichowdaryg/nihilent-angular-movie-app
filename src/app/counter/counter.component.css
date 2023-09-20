@@ -1,9 +1,24 @@
 
- .newone{
+.newone {
     display: flex;
-    gap: 10px;
-    font-size: x-large;
-    padding: 2%;
-    color: purple;
+    flex-direction: row;
+    transform: translateX(-9.0rem);
+    gap: 20px; 
+  }
+  
+  .liked {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
     cursor: pointer;
-} 
+    outline: none; 
+  }
+  .disliked {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    outline: none; 
+  }
+ 
+  

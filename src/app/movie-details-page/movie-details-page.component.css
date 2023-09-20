@@ -1,11 +1,9 @@
-/* Style for the iframe */
 iframe {
     width: 100%;
     height: 600px;
-    border: none; /* Remove the iframe border */
+    border: none; 
   }
   
-  /* Style for the container div */
   .final {
     display: flex;
     flex-direction: column;
@@ -13,48 +11,41 @@ iframe {
     padding: 20px;
     border: 1px solid #ccc;
     margin: 10px;
-    max-width: 300px; /* Adjust this to your preferred width */
+    max-width: 300px; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  /* Style for the movie image div */
   .movie.img img {
     max-width: 100%;
     height: auto;
   }
   
-  /* Style for the movie name div */
   .moviename {
     display: flex;
     align-items: center;
     margin-top: 10px;
   }
   
-  /* Style for the movie name text */
   .movie-name {
     font-size: 20px;
     font-weight: bold;
     margin-right: 10px;
   }
   
-  /* Style for the expand button */
   button[aria-label="Expand-less"] {
     background-color: transparent;
     border: none;
     cursor: pointer;
   }
   
-  /* Style for the movie rating */
   .movie-rating {
     font-size: 18px;
     margin-left: auto;
   }
   
-  /* Style for the movie content paragraph */
   p {
-    display: none; /* Initially hidden */
+    display: none; 
     margin-top: 10px;
   }
   
-  /* Style for the app-counter component (assuming it has a class) */
   

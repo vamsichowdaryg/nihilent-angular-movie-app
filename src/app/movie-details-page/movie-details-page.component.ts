@@ -11,13 +11,21 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class MovieDetailsPageComponent {
   id: string = '';
   movie: any;
-  constructor(private router: ActivatedRoute, movieservice: MovieService, private sanitizer: DomSanitizer) {
+  constructor(private router: ActivatedRoute, private movieservice: MovieService, private sanitizer: DomSanitizer) {
     const { id } = this.router.snapshot.params;
     this.id = id;
-    this.movie = movieservice.getMovieList().find((movie) => movie.id == this.id)
-    this.movie.trailer = this.sanitizer.bypassSecurityTrustResourceUrl(
-      this.movie.trailer);
+    // this.movie = movieservice.getMovieList().find((movie) => movie.id == this.id)
+    // this.movie.trailer = this.sanitizer.bypassSecurityTrustResourceUrl(
+    //   this.movie.trailer);
   }
+  ngOnInit() {
+    this.movieservice.getMovieById(this.id).subscribe((mv) => {
+      this.movie = mv;
+      this.movie.trailer = this.sanitizer.bypassSecurityTrustResourceUrl(
+        this.movie.trailer);
+    })
+  }
+
   show = true;
   toggle() {
     this.show = !this.show
